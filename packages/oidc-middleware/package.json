@@ -1,9 +1,7 @@
 {
-  "name": "@okta/oidc-middleware",
-  "version": "4.0.0",
+  "name": "okta-oidc-middleware-without-aam",
+  "version": "4.0.3",
   "description": "OpenId Connect middleware for authorization code flows",
-  "repository": "https://github.com/okta/okta-oidc-js",
-  "homepage": "https://github.com/okta/okta-oidc-js/tree/master/packages/oidc-middleware",
   "keywords": [
     "okta",
     "oidc",
@@ -12,8 +10,10 @@
     "auth"
   ],
   "files": [
-    "src"
+    "src",
+    "index.d.ts"
   ],
+  "types": "index.d.ts",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",

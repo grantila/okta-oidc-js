@@ -1,8 +1,6 @@
-[<img src="https://devforum.okta.com/uploads/oktadev/original/1X/bf54a16b5fda189e4ad2706fb57cbb7a1e5b8deb.png" align="right" width="256px"/>](https://devforum.okta.com/)
+# What is this?
 
-[![Support](https://img.shields.io/badge/support-developer%20forum-blue.svg)][devforum]
-[![npm version](https://img.shields.io/npm/v/@okta/oidc-middleware.svg?style=flat-square)](https://www.npmjs.com/package/@okta/oidc-middleware)
-[![build status](https://img.shields.io/travis/okta/okta-oidc-js/master.svg?style=flat-square)](https://travis-ci.org/okta/okta-oidc-js)
+This is a fork of [@okta/oidc-middleware](https://www.npmjs.com/package/@okta/oidc-middleware) with `/oauth2` prepended to its hard-coded url's.
 
 # Okta NodeJS OIDC Middleware
 
@@ -106,21 +104,36 @@ oidc.on('error', err => {
 
 ## API reference
 
-* [ExpressOIDC API](#expressoidc-api)
-  * [new ExpressOIDC(config)](#new-expressoidcconfig)
-  * [oidc.router](#oidcrouter)
-  * [oidc.on('ready', callback)](#oidconready-callback)
-  * [oidc.on('error', callback)](#oidconerror-callback)
-  * [oidc.ensureAuthenticated({ redirectTo?: '/uri' })](#oidcensureauthenticated-redirectto-uri-)
-  * [oidc.forceLogoutAndRevoke()](#oidcforcelogoutandrevoke)
-  * [req.isAuthenticated()](#reqisauthenticated)
-  * [req.logout()](#reqlogout)
-  * [req.userContext](#requsercontext)
-* [Customization](#customization)
-  * [Customizing Routes](#customizing-routes)
-  * [Using a Custom Login Page](#using-a-custom-login-page)
-  * [Extending the User](#extending-the-user)
-  * [Using Proxy Servers](#using-proxy-servers)
+- [What is this?](#what-is-this)
+- [Okta NodeJS OIDC Middleware](#okta-nodejs-oidc-middleware)
+  - [Release status](#release-status)
+  - [Need help?](#need-help)
+  - [Getting started](#getting-started)
+  - [Usage guide](#usage-guide)
+  - [API reference](#api-reference)
+    - [ExpressOIDC API](#expressoidc-api)
+      - [new ExpressOIDC(config)](#new-expressoidcconfig)
+      - [oidc.router](#oidcrouter)
+      - [oidc.on('ready', callback)](#oidconready-callback)
+      - [oidc.on('error', callback)](#oidconerror-callback)
+      - [oidc.ensureAuthenticated({ redirectTo?: '/uri' })](#oidcensureauthenticated-redirectto-uri)
+      - [oidc.forceLogoutAndRevoke()](#oidcforcelogoutandrevoke)
+      - [req.isAuthenticated()](#reqisauthenticated)
+      - [req.logout()](#reqlogout)
+      - [req.userContext](#requsercontext)
+    - [Customization](#customization)
+      - [Customizing Routes](#customizing-routes)
+      - [Using a Custom Login Page](#using-a-custom-login-page)
+      - [Extending the User](#extending-the-user)
+      - [Using Proxy Servers](#using-proxy-servers)
+    - [Upgrading](#upgrading)
+      - [from 1.x to 2.x](#from-1x-to-2x)
+      - [from 2.x to 3.x](#from-2x-to-3x)
+        - [Straightforward Okta logout for your app](#straightforward-okta-logout-for-your-app)
+        - [Local logout](#local-logout)
+      - [Okta with additional apps](#okta-with-additional-apps)
+  - [Contributing](#contributing)
+    - [Installing dependencies for contributions](#installing-dependencies-for-contributions)
 
 ### ExpressOIDC API
 

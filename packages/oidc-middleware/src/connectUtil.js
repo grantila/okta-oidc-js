@@ -73,7 +73,7 @@ connectUtil.createLoginHandler = context => {
           nonce,
           state
         };
-        const url = `${context.options.issuer}/v1/authorize?${querystring.stringify(params)}`;
+        const url = `${context.options.issuer}/oauth2/v1/authorize?${querystring.stringify(params)}`;
         return res.redirect(url);
       });
     }
