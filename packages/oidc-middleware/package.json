@@ -1,6 +1,6 @@
 {
   "name": "okta-oidc-middleware-without-aam",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "OpenId Connect middleware for authorization code flows",
   "keywords": [
     "okta",
